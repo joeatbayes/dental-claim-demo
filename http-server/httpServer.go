@@ -214,11 +214,6 @@ func main() {
 	//http.Handle("/gen/", http.FileServer(http.Dir("data/gen")))
 	//http.Handle("/csv/", http.FileServer(http.Dir("/joe/git/CSVTablesInBrowser")))
 
-	http.Handle("/", http.FileServer(http.Dir("../docs")))
-	http.Handle("/data/", http.StripPrefix("/data/", http.FileServer(http.Dir("../docs/data"))))
-	http.Handle("/data/autosug/", http.StripPrefix("/data/autosug/", http.FileServer(http.Dir("../docs/data/autosug"))))
-    http.Handle("/data/index/", http.StripPrefix("/data/index/", http.FileServer(http.Dir("../docs/data/index"))))
-    http.Handle("/data/recs/", http.StripPrefix("/data/recs/", http.FileServer(http.Dir("../docs/data/recs"))))
 
 	// When path ends with "/" it is treated as a tree root
 	// which allos the handler to pick up the path and any
